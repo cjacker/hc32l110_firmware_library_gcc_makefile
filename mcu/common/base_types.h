@@ -79,6 +79,8 @@
 #define __WEAKDEF            __WEAK __ATTRIBUTES
 #elif defined (__CC_ARM)
 #define __WEAKDEF            __weak
+#elif defined (__GNUC__)
+#define __WEAKDEF            __attribute__((weak))
 #else
 #error    "unsupported compiler!!"
 #endif
